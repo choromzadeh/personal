@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import getNavLinks from './../services/navLinks';
+import personal_IMG from '../images/IMG-personal.jpg'
 
 
 class SideBar extends Component {
@@ -16,9 +17,11 @@ class SideBar extends Component {
                 <div className="sidebar-sticky">
                     <div className="text-center">
                         <img
-                            src="https://via.placeholder.com/200x200"
+                            src={personal_IMG}
                             className="img-thumbnail img-fluid"
                             alt=""
+                            height='200'
+                            width='200'
                         />
                         <span className="card bg-danger shadow user-fullname">
                             محمد چرم زاده
