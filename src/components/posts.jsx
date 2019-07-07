@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import getPosts from '../services/fakePosts'
+import Like from './like';
 
 class Posts extends Component {
     constructor(props) {
@@ -54,8 +55,8 @@ class Posts extends Component {
                                 <li className="list-inline-item">
                                     <a href="#">{post.postTags}</a>
                                 </li>
-                                
                             </ul>
+                            <Like post={post}></Like>
                         </div>
                 </article>
                 </div>
