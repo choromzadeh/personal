@@ -18,6 +18,7 @@ ReactDOM.render(
             <Route path="/" component={App} />
         </Switch>
     </BrowserRouter>
+   
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

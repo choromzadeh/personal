@@ -5,6 +5,13 @@ import Posts from './components/posts';
 import Footer from './components/footer';
 import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 import Pagination from './components/pagination';
+import { Route, BrowserRouter, Link } from 'react-router-dom';
+import Courses from './components/courses';
+import Education from './components/educations';
+import Skills from './components/skills';
+import About from './components/about';
+import Contact from './components/contact';
+import { Switch } from 'react-router-dom';
 
 class App extends Component {
     render() {
@@ -18,7 +25,16 @@ class App extends Component {
                             role="main"
                             className="col-md-9 ml-sm-auto col-lg-10 px-4"
                         >
-                            <Posts />
+                            <Switch>
+                                <Route path="/courses" component={Courses}/>
+                                <Route path="/education" component={Education}/>
+                                <Route path="/skills" component={Skills}/>
+                                <Route path="/about" component={About}/>
+                                <Route path="/contact" component={Contact}/>
+                                <Route path="/" component={Posts}/>
+                            </Switch>
+                            
+                            
                           
                         </main>
                     </div>
