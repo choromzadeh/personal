@@ -4,6 +4,7 @@ import Sidebar from './components/sidebar';
 import Posts from './components/posts';
 import Footer from './components/footer';
 import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
+import Pagination from './components/pagination';
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                             className="col-md-9 ml-sm-auto col-lg-10 px-4"
                         >
                             <Posts />
+                            <Pagination></Pagination>
                         </main>
                     </div>
                 </div>
