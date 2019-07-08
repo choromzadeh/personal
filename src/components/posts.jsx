@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import getPosts from '../services/fakePosts'
 import Like from './like';
+import pagiantion from '../utils/pagination';
+import Pagination from './pagination';
 
 class Posts extends Component {
     constructor(props) {
@@ -16,12 +18,28 @@ class Posts extends Component {
         const posts = getPosts();
         this.setState({ posts });
     }
+
+    handlePageChange=(page)=> {
+        this.setState({ currentPage: page  });
+    }
+
+    getPageData = () =>{
+      const  {posts:allPosts,currentPage,pageSize} = this.state;
+      const posts = pagiantion(allPosts,currentPage,pageSize);
+      return {
+          totalCount:allPosts.length,
+          data: posts
+      }
+      
+
+    }
     render() { 
-        const {posts} = this.state; 
+        const {currentPage,pageSize} = this.state; 
+        const {totalCount, data} = this.getPageData();
         return (
             
             <React.Fragment>
-                {posts.map(post =>(
+                {data.map(post =>(
             <div class="container-fluid">
                 <div className="card shadow-lg bg-light m-2">
                 <article className="p-3">
@@ -62,6 +80,7 @@ class Posts extends Component {
                 </div>
             </div>
             ))}
+            <Pagination currentPage={currentPage} pageSize={pageSize} itemCount={totalCount} onPageChange={this.handlePageChange}></Pagination>
             </React.Fragment>
          );
     }
