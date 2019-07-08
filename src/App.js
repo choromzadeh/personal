@@ -3,6 +3,7 @@ import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Posts from './components/posts';
 import Footer from './components/footer';
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 
 class App extends Component {
     render() {
@@ -21,6 +22,7 @@ class App extends Component {
                     </div>
                 </div>
                 <Footer />
+                <ScrollUpButton />
             </React.Fragment>
         );
     }
