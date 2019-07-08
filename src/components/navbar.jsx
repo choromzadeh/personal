@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './searchBar';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return ( 
@@ -8,9 +9,9 @@ const Navbar = () => {
             <SearchBar></SearchBar>
             <ul className="navbar-nav px-3">
                 <li className="nav-item text-nowrap">
-                <a className="nav-link" href="/login">
+                <Link className="nav-link" to="/login">
                         ورود
-                    </a>
+                    </Link>
                 </li>
             </ul>
             
