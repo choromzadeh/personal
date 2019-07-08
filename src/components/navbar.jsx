@@ -8,8 +8,8 @@ const Navbar = () => {
             <SearchBar></SearchBar>
             <ul className="navbar-nav px-3">
                 <li className="nav-item text-nowrap">
-                <a className="nav-link" href="#">
-                        خروج
+                <a className="nav-link" href="/login">
+                        ورود
                     </a>
                 </li>
             </ul>
