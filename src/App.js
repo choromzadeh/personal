@@ -22,7 +22,7 @@ class App extends Component {
                     </div>
                 </div>
                 <Footer />
-                <ScrollUpButton />
+                <ScrollUpButton style={{left:10, bottom:40}} />
             </React.Fragment>
         );
     }
