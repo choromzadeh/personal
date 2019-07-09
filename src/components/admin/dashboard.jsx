@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './navbar';
 import Sidebar from './sidebar';
-import { Switch } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import AllPosts from './allPosts';
 
 class Dashboard extends Component {
     render() {
@@ -15,15 +16,10 @@ class Dashboard extends Component {
                             role="main"
                             className="col-md-9 ml-sm-auto col-lg-10 px-4"
                         >
-                            {/* <Switch>
-                                <Route path="/courses" component={Courses}/>
-                                <Route path="/education" component={Education}/>
-                                <Route path="/skills" component={Skills}/>
-                                <Route path="/about" component={About}/>
-                                <Route path="/contact" component={Contact}/>
-                                <Route path="/" exact component={Posts}/>
+                            <Switch>
+                                <Route path="/admin/allposts" component={AllPosts}/>
                                 <Redirect to="not-found"/>
-                            </Switch> */}
+                            </Switch>
                             
                             
                           
