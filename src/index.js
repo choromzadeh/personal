@@ -12,10 +12,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Login from './components/login';
 import NotFound from './components/notFound';
+import Dashboard from './components/admin/dashboard';
 
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
+            <Route  path="/admin" component={Dashboard}/>
             <Route path="/not-found" component={NotFound}/>
             <Route path="/login" component={Login}/>
             <Route path="/" component={App} />
