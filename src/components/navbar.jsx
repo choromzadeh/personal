@@ -9,10 +9,10 @@ const Navbar = () => {
             <SearchBar></SearchBar>
             <ul className="navbar-nav px-3">
                 <li className="nav-item text-nowrap">
-                {/* <Link className="nav-link" to="/login">
+                <Link className="nav-link" to="/login">
                         ورود
-                    </Link> */}
-                <a className="nav-item text-nowrap">خروج</a>
+                    </Link>
+               
                 </li>
             </ul>
             
