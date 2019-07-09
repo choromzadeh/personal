@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import getNavLinks from './../services/navLinks';
-import personal_IMG from '../images/IMG-personal.jpg'
+import personal_IMG from '../images/IMG-personal.jpg';
+import { Link } from 'react-router-dom';
+
 
 
 class SideBar extends Component {
@@ -33,10 +35,10 @@ class SideBar extends Component {
                     <ul class="nav flex-column">
                         {navLinks.map(l =>  (
                             <li className="nav-item" key={l.id}>
-                                <a className="nav-link " href={l.link}>
+                                <Link className="nav-link " to={l.link}>
                                     <span className={l.icon}></span>
                                     <span className="m-2" >{l.text}</span>
-                                </a>
+                                </Link>
                         </li>
                         ))}
                         
