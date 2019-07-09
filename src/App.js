@@ -5,7 +5,7 @@ import Posts from './components/posts';
 import Footer from './components/footer';
 import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 import Pagination from './components/pagination';
-import { Route, BrowserRouter, Link } from 'react-router-dom';
+import { Route, BrowserRouter, Link, Redirect } from 'react-router-dom';
 import Courses from './components/courses';
 import Education from './components/educations';
 import Skills from './components/skills';
@@ -31,7 +31,8 @@ class App extends Component {
                                 <Route path="/skills" component={Skills}/>
                                 <Route path="/about" component={About}/>
                                 <Route path="/contact" component={Contact}/>
-                                <Route path="/" component={Posts}/>
+                                <Route path="/" exact component={Posts}/>
+                                <Redirect to="not-found"/>
                             </Switch>
                             
                             
