@@ -7,7 +7,9 @@ const Login = ({history}) => {
     const handleLogin=()=> {
         history.replace("/");
     }
-    return ( 
+    return (
+        <div class="container-fluid pt-5">
+            
         <form className="rtl form-signin border rounded m-2 mx-auto bg-light shadow">
             <h1 className="h3 mb-3 font-weight-normal">لطفا وارد شوید</h1>
             <label for="inputEmail" className="sr-only">
@@ -40,6 +42,7 @@ const Login = ({history}) => {
                 ورود
             </button>
         </form>
+        </div>
      );
 }
  
