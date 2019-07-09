@@ -3,6 +3,7 @@ import Navbar from './navbar';
 import Sidebar from './sidebar';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import AllPosts from './allPosts';
+import CreatePost from './createPost';
 
 class Dashboard extends Component {
     render() {
@@ -18,7 +19,9 @@ class Dashboard extends Component {
                         >
                             <Switch>
                                 <Route path="/admin/allposts" component={AllPosts}/>
-                                <Redirect to="not-found"/>
+                                <Route path="/admin/create-post" component={CreatePost}/>
+                                
+                                {/* <Redirect to="/not-found"/> */}
                             </Switch>
                             
                             

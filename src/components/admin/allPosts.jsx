@@ -36,7 +36,7 @@ class AllPosts extends Component {
         const {currentPage, pageSize} = this.state;
         const {data, totalCount} = this.getPageData();
         return ( 
-            <div class="container-fluid bg-light border rounded">
+            <div class="container-fluid bg-light border rounded shadow">
                 <table class="table">
                     <thead>
                         <tr>
