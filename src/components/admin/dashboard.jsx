@@ -4,6 +4,8 @@ import Sidebar from './sidebar';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import AllPosts from './allPosts';
 import CreatePost from './createPost';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Dashboard extends Component {
     render() {
@@ -11,6 +13,7 @@ class Dashboard extends Component {
             <React.Fragment>
                 <Navbar />
                 <div className="container-fluid rtl">
+                <ToastContainer/>
                     <div className="row">
                         <Sidebar />
                         <main
