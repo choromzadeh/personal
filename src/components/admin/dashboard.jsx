@@ -6,6 +6,7 @@ import AllPosts from './allPosts';
 import CreatePost from './createPost';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import EditPost from './editPost';
 
 class Dashboard extends Component {
     render() {
@@ -23,6 +24,8 @@ class Dashboard extends Component {
                             <Switch>
                                 <Route path="/admin/allposts" component={AllPosts}/>
                                 <Route path="/admin/create-post" component={CreatePost}/>
+                                <Route path="/admin/editpost" component={EditPost}/>
+                                
                                 
                                 {/* <Redirect to="/not-found"/> */}
                             </Switch>

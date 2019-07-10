@@ -55,6 +55,13 @@ class AllPosts extends Component {
 
             }
         }
+
+        handleRedirect(post){
+            this.props.history.push({
+                pathname:"/admin/editpost",
+                post: post
+            })
+        }
     
     render() { 
         const {currentPage, pageSize} = this.state;
@@ -79,7 +86,7 @@ class AllPosts extends Component {
                                     <td scope="row">{p.postTitle}</td>
                                     <td scope="row">{p.postDate}</td>
                                     <td scope="row">{p.postLike}</td>
-                                    <td><button type="button" class="btn btn-success">ویرایش</button></td>
+                                    <td><button type="button" class="btn btn-success" onClick={()=> this.handleRedirect(p)}>ویرایش</button></td>
                                     <td><button type="button" class="btn btn-danger" onClick={() => this.handleDelete(p._id)}>حذف</button></td>
                                 </tr>
                             ))}

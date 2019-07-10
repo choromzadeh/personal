@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { async } from 'q';
+import {incPostLike} from '../services/postService';
 
 
 class Like extends Component {
@@ -11,10 +13,18 @@ class Like extends Component {
     }
 
 
-    handleLikeClick = post => {
+    handleLikeClick = async post => {
+    const originalPost= this.state.post;
     const  likedPost = {...post }
-    likedPost.like++;
+    likedPost.postLike++;
     this.setState({ post: likedPost  });
+
+    try{
+        const result = await incPostLike(post._id);
+    }
+    catch(ex){
+        this.setState({ post: originalPost  });
+    }
     }
     render() { 
         const {post} = this.state;
@@ -22,7 +32,7 @@ class Like extends Component {
             <div className="fa fa-heart float-left" style={{cursor:'pointer',color:'red'}} onClick={() => this.handleLikeClick(post)}>
 
                 <span class="badge badge-pill badge-primary m-1"></span>
-                {post.like}
+                {post.postLike}
 
             </div>
          );

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import getPosts from '../services/fakePosts'
 import Like from './like';
 import pagiantion from '../utils/pagination';
 import Pagination from './pagination';
+import { getPosts } from '../services/postService';
 
 class Posts extends Component {
     constructor(props) {
@@ -14,9 +14,9 @@ class Posts extends Component {
          }
     }
 
-    componentDidMount(){
-        const posts = getPosts();
-        this.setState({ posts });
+    async componentDidMount(){
+        const {data} = await getPosts();
+        this.setState({ posts: data });
     }
 
     handlePageChange=(page)=> {
