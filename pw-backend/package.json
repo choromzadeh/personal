@@ -17,7 +17,7 @@
         "lodash": "^4.17.13",
         "mongoose": "^5.3.14",
         "morgan": "^1.9.1",
-        "npm": "^6.10.0",
+        "npm": "^6.13.4",
         "persian-date": "^1.0.5"
     },
     "keywords": [],
